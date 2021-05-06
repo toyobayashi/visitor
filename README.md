@@ -15,24 +15,33 @@ VISITOR_DB_NAME=<db>
 
 ## Local development
 
+```bash
+git clone https://github.com/toyobayashi/visitor.git
+cd visitor
+npm install
+```
+
 Create `.env` file in root, add environment variables mentioned above.
 
-Serverful
+* Serverful
 
-```bash
-npm run watch:server
-```
+    ```bash
+    npm run build:server
 
-```bash
-node index
-```
+    # or
+    # npm run watch:server
+    ```
 
-Vercel dev
+    ```bash
+    node index
+    ```
 
-```
-npm install -g vercel
-npm run dev
-```
+* Vercel dev (Serverless)
+
+    ```
+    npm install -g vercel
+    npm run dev
+    ```
 
 ## Deploy to Vercel
 
