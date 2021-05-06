@@ -1,0 +1,8 @@
+/dist
+/lib
+node_modules
+/typings
+/test
+/index.js
+/server.js
+/api/index.js

@@ -1,0 +1,48 @@
+{
+  "name": "@tybys/visitor",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "watch:server": "cross-env NODE_ENV=development node ./scripts/watch-server.js",
+    "build:server": "cross-env NODE_ENV=production node ./scripts/build-server.js",
+    "dev": "vercel dev",
+    "d:dev": "vercel",
+    "d:prod": "vercel --prod"
+  },
+  "engines": {
+    "node": ">= 14.15.0"
+  },
+  "keywords": [],
+  "author": "toyobayashi",
+  "license": "MIT",
+  "dependencies": {
+    "badge-maker": "^3.3.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "mongoose": "5.12.7",
+    "tslib": "2.2.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/mongoose": "^5.10.5",
+    "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^9.0.0",
+    "eslint": "^7.25.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "fork-ts-checker-webpack-plugin": "^6.2.6",
+    "terser-webpack-plugin": "^5.1.1",
+    "ts-loader": "^9.1.2",
+    "typescript": "~4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-node-externals": "^2.5.2"
+  }
+}

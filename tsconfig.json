@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2019",
+    "declaration": false,
+    "sourceMap": true,
+    "strict": true,
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "experimentalDecorators": false,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
+    "importHelpers": true,
+    "noEmitHelpers": true
+  },
+  "include": [
+    "./api/**/*.ts"
+  ]
+}

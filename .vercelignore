@@ -1,0 +1,6 @@
+.vscode
+/api/**/*.js
+/index.js
+.env
+.eslint*
+tsconfig.eslint.json
