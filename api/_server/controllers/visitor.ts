@@ -1,31 +1,19 @@
-import type { Request, Response } from 'express'
-import { makeBadge } from 'badge-maker'
+import type { RequestHandler } from 'express'
 import { getCountAndIncrease } from '../models/counter'
+import { errorBadge, visitorBadge } from '../utils/badge'
 
-const errorBadge = makeBadge({
-  label: 'visitor',
-  message: 'error',
-  color: 'red'
-})
-
-export const visitor = async (req: Request, res: Response): Promise<void> => {
+export const visitor: RequestHandler = async (req, res, next): Promise<void> => {
   const { uid } = req.query
   if (!uid) {
-    console.error('uid is required')
-    res.status(200).type('svg').send(errorBadge)
+    res.status(200).type('svg').send(errorBadge('uid is required'))
     return
   }
   let count: number = -1
   try {
     count = await getCountAndIncrease(uid as string)
   } catch (err) {
-    console.error(err)
-    res.status(200).type('svg').send(errorBadge)
+    next(err)
     return
   }
-  res.status(200).type('svg').send(makeBadge({
-    label: 'visitor',
-    message: count.toString(),
-    color: 'blue'
-  }))
+  res.status(200).type('svg').send(visitorBadge(count))
 }
